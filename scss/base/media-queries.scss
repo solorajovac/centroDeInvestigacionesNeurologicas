@@ -1,0 +1,296 @@
+@media screen and (min-width: 700px) {
+
+    body {
+
+        #bodyIndex {
+            background-image: linear-gradient(180deg,#2e77f4 0%,rgba(58,167,244,0.87) 100%)!important;
+        }
+
+
+        header {
+            // NAV
+            .container {
+
+                .navPrincipal {
+                    position: fixed;
+                    background-color: white;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    // justify-content: space-between;
+                    align-items: center;
+                    margin: 0;
+                    padding: 0;
+                    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+                    z-index: 50;
+                    
+                    .toggle-menu {
+                        display: none;
+                    }
+
+                    a {
+                        width: 100%;
+                        margin: 0;
+                        padding: 0;
+
+                        img {
+                            width: 200px;
+
+                            &:hover {
+                                transform: scale(1.05)
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+
+        
+        // SECTION INSTITUCIÓN
+        #sectionInstitucion {
+            background-image: linear-gradient(
+                0deg,
+                    rgba(33, 4, 173, 0.5), 
+                    rgba(27, 2, 140, 0.5)
+                )
+            ,url(/img/institucion.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            width: 100%;
+            height: 500px;
+            padding: 30px 0;
+            margin: 0;
+            // background-size: 100%;
+            background-attachment: fixed;
+            color: white;
+
+            .container {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                margin: auto;
+
+                .p {
+                    width: 80%;
+                    text-align: justify;
+                    // text-indent: 160px;
+                    line-height: 2.5em;
+                    font-size: large;
+                    // font-weight: bold;
+                    padding-bottom: 20px;
+
+                    h2 {
+                        text-align: center;
+                        margin-bottom: 30px;
+                        color: white;
+                    }
+                }
+
+                .img {
+                    width: 150%;
+                    
+                    img {
+                        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+                        border-top-right-radius: 20px;
+                        border-bottom-right-radius: 25px;
+                        border-left: 10px solid rgb(0, 8, 255);
+                    }
+                }
+            }
+        }
+
+
+        // SECTION VALORES  
+        #sectionValores {
+            // background-image: linear-gradient(to top 180deg,#2e77f4 0%,rgba(58,167,244,0.87) 100%)!important;
+            width: 100%;
+            padding: 30px;
+
+            .container {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                width: 100%;
+
+                .divValores {
+                    margin: 10px;
+                    padding: 40px 0;
+                    width: 100%;
+                    margin-top: -150px;
+                }
+            }
+        }
+
+        // CONVENIOS CON OOSS
+        #conveniosObras {
+            background-color: white;
+            h2 {
+                margin-top: 30px;
+            }
+
+            .obras {
+                
+            }
+
+            .slider {
+                width: 85vw;
+                height: auto;
+                margin: auto;
+                overflow: hidden;
+                padding: 80px;
+    
+                .slide-track {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    animation: scroll 40s linear infinite;
+                    -webkit-animation: scroll 40s linear infinite;
+                    width: calc(200px * 12);
+    
+                    .slide {
+                        width: 200px;
+                        margin-left: 10px;
+    
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                @keyframes scroll {
+                    0% {
+                        -webkit-transform: translateX(0);
+                        transform: translateX(0);
+                    }
+                    100% {
+                        -webkit-transform: translateX(calc(-200px * 6));
+                        transform: translateX(calc(-200px * 6));
+                    }
+                }
+            }
+        }
+
+        // SECTION PROFESIONALES
+        #profesionales {
+            // background-image: linear-gradient(180deg,#2e77f4 0%,rgba(58,167,244,0.87) 100%)!important;
+
+
+            .container { 
+                width: 100%;
+                margin-bottom: 15px;
+
+                .especialistas {
+                    display: flex;
+                    
+                    .card {
+                        margin: 0 15px;
+                        padding: 30px 20px 10px 20px;
+
+                        button {
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // FOOTER 
+    #footer {
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin: auto;
+
+            .horarios {
+                width: 100%;
+
+                p {
+                    display: none;
+                }
+            }
+
+        }
+    }
+
+
+    // INSTITUCIONAL PAGE
+        #mainInstitucion {
+            // width: 90%;
+            margin: auto;
+            background-color: rgb(255, 255, 255);
+    
+            #InstitucionalPage {
+                width: 100%;
+                height: 400px;
+                color: white;
+                    background-image: linear-gradient(
+                        0deg,
+                            rgba(55, 0, 255, 0.8), 
+                            rgba(0, 13, 255, 0.8)
+                        )
+                    ,url(/img/institucion2.jpg);
+                    background-position: center center;
+                    background-size: cover;
+                    // padding: 50px 30px;
+                    // margin: 20px 15px;
+                    border-radius: 15px;
+                    font-weight: bold;
+                
+            }
+    
+            #propiedades {
+                margin: auto;
+    
+                .divsPropiedades {
+                    display: flex;
+                    margin: auto;
+                    justify-content: center;
+    
+                    .title {
+                        width: 50%;
+                        height: 200px;
+    
+                        p {
+                            padding: 10%;
+                        }
+    
+                        h2, .svg {
+                            color: blue;
+                            margin: auto auto;
+                        }
+                    }
+    
+                }
+    
+                .divsPropiedades1 {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: center;
+    
+                    .title {
+                        width: 150%;
+                        height: 200px;
+    
+                        p {
+                            text-align: justify;
+                            padding: 10%;
+                        }
+                    }
+                }
+            }
+        }
+    
+    
+        
+
+    // INFORMACIÓN PAGE
+
+}

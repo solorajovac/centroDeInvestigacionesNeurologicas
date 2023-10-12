@@ -1,0 +1,513 @@
+@import "../base/media-queries.scss";
+@import "../base/mapas";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+
+    h1{ font-size: 3.5em;}
+    h2{ font-size: 2.7em;}
+    h3{ font-size: 2em;}
+    h4{ font-size: 1.25em;}
+    ul{list-style: none;}
+    a{text-decoration: none; color: black;}
+
+    img {
+        max-width: 100%;
+    }
+
+    button, .btn-enviar {
+        font-size: 1em;
+        font-weight: bold;
+        width: 80%;
+        padding: 8px 20px;
+        border-radius: 50px;
+        border: 2px solid rgb(64, 0, 255);
+        // box-shadow: 2px 2px 10px rgb(0, 0, 0);
+        color: rgb(0, 0, 0);
+        background-color: rgba(255, 255, 255, 0.824);
+
+        &:hover {
+            background-color: rgba(3, 3, 164, 0.824);
+            color: white;
+        }
+    }
+
+    .container {
+        max-width: 1400px;
+        margin: auto;
+    }
+
+    // HEADER
+    .headerIndex {
+                position: fixed;
+                box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+                background-color: white;
+                width: 100%;
+                padding: .5rem 1rem;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+                align-items: center;
+                z-index: 50;
+    
+                .a {
+                    width: 20%;
+                    height: auto;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+
+                        &:hover {
+                            transform: scale(1.05)
+                        }
+                    }
+                }
+    
+                .button {
+                    display: none;
+                    cursor: pointer;
+    
+                    .svg {
+                        width: 2em;
+                        height: 2em;
+                    }
+                }
+    
+                .nav {
+    
+                    ul {
+                        display: flex;
+                        flex-flow: row nowrap;
+                        justify-content: flex-end;
+                        align-items: center;
+    
+                        li {
+                            margin: 0 1.5em;
+                            font-weight: bold;
+    
+                            a {
+                                color: blue;
+
+                                &:hover {
+                                    color: rgb(42, 42, 167);
+                                }
+                            }
+                        }
+                    }
+                }
+    }
+
+    @media screen and (max-width:1024px) {
+                .headerIndex {
+                    
+                    .a {
+                        width: 40%;
+                        height: auto;
+    
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    .button {
+                        display: block;
+                    }
+    
+                    .nav {
+                        width: 100%;
+                        display: none;
+    
+                        ul {
+                            flex-direction: column;
+    
+                            li {
+                                margin: 1rem 0;
+                                font-weight: bold;
+    
+                                a {
+                                    color: blue;
+
+                                    &:hover {
+                                        color: rgb(42, 42, 167);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .activo {
+                        display: block;
+                    }
+                }
+
+                #hero {
+                    height: 70vh; 
+                }
+    }
+
+    // Section Hero
+    #hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        height: 80vh;
+        color: white;
+        background-image: linear-gradient(
+            0deg,
+                rgba(0,0,0,0.5), 
+                rgba(0,0,0,0.5)
+            )
+        ,url(/img/240_F_205994981_ZwhV5qbez1wFNbGPecSdqnImPUIWKAnj.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+
+        h1 {
+            font-size: 3em;
+            line-height: 100px;
+        }
+
+    }
+
+    // SECCIÓN Institución
+    #sectionInstitucion {
+        // background-image: url(/img/Fondos/fondoAzul.jpg);
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        
+        background-image: linear-gradient(
+            0deg,
+            rgba(33, 4, 173, 0.5), 
+            rgba(27, 2, 140, 0.5)
+        )
+        ,url(/img/institucion.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        width: 100%;
+        height: 400px;
+        margin-top: 15px;
+
+        .container {
+            text-align: center;
+            padding: 0px 12px;
+            color: white;
+
+
+            .p {
+                width: 100%;
+                text-align: justify;
+                text-indent: 20px;
+                // font-weight: bold;
+                line-height: 1.5em;
+                padding: 25px 15px;
+
+                h2 {
+                    text-align: center;
+                    margin-bottom: 20px;
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    // SECCIÓN VALORES
+    #sectionValores {
+        width: 100%;
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            width: 80%;
+            margin-bottom: 20px;
+            
+
+            .divValores {
+                box-shadow: rgba(3, 3, 199, 0.24) 0px 3px 8px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                background-color: rgb(255, 255, 255);
+                color: rgb(0, 0, 0);
+                border-radius: 5px;
+                padding: 20px 0;
+                width: 100%;
+
+
+                &:hover {
+                    background-color: rgb(143, 133, 255);
+                    transform: scale(1.05)
+                }
+
+                h2 {
+                    margin: 0;
+                    color: rgb(0, 0, 0);
+                }
+
+                p {
+                    padding: 0 25px;
+                }
+            }
+
+            .divValores1 {
+                margin-top: -80px;
+            }
+        }
+    }
+
+
+    // SECCIÓN VIDEO
+    #video {
+
+        .container {
+            position: center;
+        }
+    }
+
+    // SECTION CONVENIOS CON OOSS
+    #conveniosObras {
+
+        h2 {
+            text-align: center;
+            padding: 20px 0;
+
+            &:hover {
+                color: blue;
+            }
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            margin-top: -30px;
+
+            .obras {
+                margin-bottom: 10px;
+                font-size: 1em;
+                font-weight: bold;
+                width: 30%;
+                padding: 8px 20px;
+                border-radius: 50px;
+                border: 2px solid rgb(64, 0, 255);
+                // box-shadow: 2px 2px 10px rgb(0, 0, 0);
+                color: rgb(255, 255, 255);
+                background-color: rgba(3, 3, 164, 0.824);
+        
+                &:hover {
+                    background-color: rgba(7, 7, 132, 0.824);
+                    color: rgb(255, 255, 255);
+                }
+            }
+        }
+
+        .slider {
+            width: 85vw;
+            height: 50%;
+            margin: auto;
+            overflow: hidden;
+
+            .slide-track {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                animation: scroll 40s linear infinite;
+                -webkit-animation: scroll 40s linear infinite;
+                width: calc(200px * 12);
+
+                .slide {
+                    width: 200px;
+                    margin-left: 10px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            @keyframes scroll {
+                0% {
+                    -webkit-transform: translateX(0);
+                    transform: translateX(0);
+                }
+                100% {
+                    -webkit-transform: translateX(calc(-200px * 6));
+                    transform: translateX(calc(-200px * 6));
+                }
+            }
+        }
+    }
+
+    // SECCIÓN PROFESIONALES
+    #profesionales {
+
+        .container {
+            text-align: center;
+            padding: 0px 12px;
+
+            .card {
+                margin-bottom: 20px;
+                padding: 30px 20px 10px 20px;
+                border-radius: 10px;
+                // background-color: rgb(55, 5, 255);
+                text-align: center;
+                box-shadow: rgba(30, 0, 255, 0.24) 0px 3px 8px;
+
+                h3 {
+                    margin: 15px 0;
+                    text-align: center;
+                    font-size: 1.5em;
+                    color: rgb(7, 7, 206);
+                }
+
+                button {
+                    margin-top: 20px;
+                }
+            }
+
+
+            h2 {
+                margin: 0;
+                padding: 30px 0;
+            }
+
+            .img {
+                width: 100%;
+                
+
+                img {
+                    width: 90%;
+                    width: 70%;
+                    border-radius: 50%;
+                    box-shadow: rgba(25, 0, 255, 0.24) 0px 3px 8px;
+                    
+                    &:hover {
+                        transform: scale(1.1)
+                    }
+                }
+            }
+        }
+    }
+
+    /* WHATSAPP */
+.btn-wsp {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    bottom: 25px;
+    right: 25px;
+    background: #25d366;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    transition: all 300ms ease;
+
+    &:hover {
+        background: #279951;
+    }
+  }
+
+    // FOOTER
+    footer {
+        background-image: linear-gradient(180deg, #1b24ce 0%, #1e4083 100%);
+        color: white;
+        width: 100%;
+        
+        .container{
+            display: grid;
+            place-items: center;
+            width: 100%;
+            text-align: center;
+
+            .img {
+                
+                width: 90%;
+                img {
+                    width: 100%;
+                    filter: drop-shadow(1rem 1rem 1rem rgb(0, 0, 0));
+                    
+                }
+            }
+
+            .contacto {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+                div {
+                    display: flex;
+                    width: 100%;
+                    margin-bottom: 20px;
+
+                    .fas {
+
+                        &:hover {
+                            background-color: rgb(0, 0, 253);
+                        }
+                    }
+
+                    span {
+                        margin-left: 20px;
+                        border-radius: 50%;
+                        padding: 2%;
+
+                        .text {
+                            margin: 0;
+                            padding: 0;
+                        }
+
+                        a {
+                            color: white;
+
+                            &:hover {
+                                color: rgb(76, 76, 252);
+                            }
+                        }
+                    }
+
+                    h3 {
+                        font-size: 1.2em;
+                    }
+
+
+                }
+            }
+
+            .horarios {
+                line-height: 25px;
+            }
+        }
+
+        .copy {
+            text-align: center;
+            color: rgb(123, 122, 122);
+
+            h4 {
+                text-align: right;
+                margin-right: 10px;
+                font-size: 0.8em;
+                background-image: linear-gradient(180deg, #1e4083 0%, #1e4083 100%);
+            
+            }
+        }
+    }
+}
